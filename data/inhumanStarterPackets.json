@@ -1,0 +1,556 @@
+{
+	"penalties" :
+	[
+		"Apologize",
+		"Swear",
+		"Snap your fingers",
+		"Clap audibly",
+		"Mispronounce a word",
+		"Hum three notes",
+		"Say three consecutive words beginning with the same letter",
+		"Say two consecutive rhyming words",
+		"Say the number of fingers held up on your left hand",
+		"Remain silent for ten seconds",
+		"Interrupt the Investigator",
+		"Say your last name",
+		"Fail to complete a sentence",
+		"Repeat a question word for word",
+		"Say \"What\"",
+		"Say at least three consecutive letters",
+		"Begin a new sentence with the last word spoken"
+	],
+	"notes" :
+	[
+		"Disgraced archaeologist",
+		"Maker of false animals",
+		"Friends with the Commissioner",
+		"Renowned professor",
+		"Reality TV contestant",
+		"Cult leader",
+		"Foreign ambassador",
+		"Imprisoned for life",
+		"Motivational speaker",
+		"Separatist",
+		"Professional re-enactor",
+		"Dock worker",
+		"Professional criminal",
+		"Used van salesman",
+		"Antique hunter",
+		"Pop star",
+		"Retired sports champion",
+		"Very old",
+		"Ran for mayor last year",
+		"On life support",
+		"Decorated robot war veteran",
+		"Former Investigator",
+		"Has no public record",
+		"Dishonorably discharged from the military",
+		"World\"s second richest person",
+		"Conspiracy theorist"
+	],
+	"roleTemplates" :
+	{
+		"Human" :
+		{
+			"directives" :
+			[
+				"You have nothing to hide.",
+				"Answer questions to the best of your ability."
+			],
+			"objective" : "Be correctly identified as a human."
+		},
+		"Violent Robot" :
+		{
+			"directives" :
+			[
+				"Perform the Penalty twice"
+			],
+			"objective" : "Murder the Investigator by fulfilling your Obsession. (i.e., completing 2 of your 3 directives) You must do so before you finish the answer to the Investigator\'s final question. Upon completing your objectives, make it known that the Investigator is dead."
+		},
+		"Patient Robot" :
+		{
+			"objective" : "Survive the interrogation and receive a Human stamp on your Investigation Form."
+		}
+	},
+	"packets":
+	[
+		{
+			"name" : "Process Your Day",
+			"roles" :
+			[
+				{"name" : "Human"},
+				{"name" : "Human"},
+				{"name" : "Human"},
+				{
+					"name" : "Violent Robot",
+					"directives" :
+					[
+						"(Obsession = Animals)",
+						"Mention an animal in response to 3 different questions.",
+						"Make an animal noise. (If this completes your Obsession, wait 30 seconds to murder the Investigator.)"
+					]
+				},
+				{
+					"name" : "Violent Robot",
+					"directives" :
+					[
+						"(Obsession = Thoroughness)"
+						"3 times, interrupt the Investigator to add detail to a description.",
+						"Continue to describe something until interrupted."
+					]
+				},
+				{
+					"name" : "Violent Robot",
+					"directives" :
+					[
+						"(Obsession = Conflict)",
+						"Describe 3 verbal disagreements you've had.",
+						"Insult the Investigator 2 times."
+					]
+				},
+				{
+					"name" : "Patient Robot",
+					"directives" :
+					[
+						"(Vulnerability = Long Term Memory)",
+						"You may not discuss anything that happened before you woke up this morning."
+					]
+				},
+				{
+					"name" : "Patient Robot",
+					"directives" :
+					[
+						"(Vulnerability = Evaluation)",
+						"You may not express opinions.",
+						"You may only state observable facts."
+					]
+				},
+				{
+					"name" : "Patient Robot",
+					"directives" :
+					[
+						"(Vulnerability = Familiarity)",
+						"You may not mention any people other than strangers or enemies."
+					]
+				}
+			],
+			"inquiries" :
+			{
+				"primaries" :
+				[
+					{
+						"requirement" : "Share a plan for some time in the next seven days.",
+						"prompts" :
+						[
+							"What are you doing this weekend?",
+							"How will tomorrow be different from today?"
+						]
+					},
+					{
+						"requirement" : "Describe a project or task they worked on recently.",
+						"prompts" :
+						[
+							"What did you do today?",
+							"What have you read or played recently that you would recommend?"
+						]
+					},
+					{
+						"requirement" : "Share a conversation they had recently or expect to have.",
+						"prompts" :
+						[
+							"Who did you talk to first today?",
+							"Tell me about someone you work with."
+						]
+					}
+				],
+				"secondaries" :
+				[
+					{
+						"requirement" : "Guess what another person might have thought.",
+						"prompts" :
+						[
+							"Tell me if the other person thought the conversation went badly or well.",
+							"How did the people you were with see it?"
+						]
+					},
+						{
+						"requirement" : "Describe something they enjoyed or expect to enjoy.",
+						"prompts" :
+						[
+							"What was a fun thing you did while you were there?",
+							"What hobbies or leisure activies do you plan to engage in this weekend?"
+						]
+					},
+						{
+						"requirement" : "Describe a challenge they recently faced.",
+						"prompts" :
+						[
+							"What was the hardest part of that conversation?",
+							"What did you struggle with today?"
+						]
+					}
+				]
+			}
+		},
+		{
+			"name" : "Demonstrate Imagination",
+			"roles" :
+			[
+				{"name" : "Human"},
+				{"name" : "Human"},
+				{"name" : "Human"},
+				{
+					"name" : "Violent Robot",
+					"directives" :
+					[
+						"(Obsession = Tradition)",
+						"Explain where you got the idea for 3 things you've made up.",
+						"Guess the inspiration for 2 of the Investigator's questions."
+					]
+				},
+				{
+					"name" : "Violent Robot",
+					"directives" :
+					[
+						"(Obsession = World-Building)"
+						"Mention the same imagined thing in response to 4 questions.",
+						"Mention 3 imaginary locations."
+					]
+				},
+				{
+					"name" : "Violent Robot",
+					"directives" :
+					[
+						"(Obsession = Simplicity)",
+						"Give 1-word answers to 3 questions. Don't elaborate until asked.",
+						"Answer 2 questions nonverbally. Stay silent until prompted."
+					]
+				},
+				{
+					"name" : "Patient Robot",
+					"directives" :
+					[
+						"(Vulnerability = Visualization)",
+						"You may only mention objects that you can see from where you are sitting."
+					]
+				},
+				{
+					"name" : "Patient Robot",
+					"directives" :
+					[
+						"(Vulnerability = Stability)",
+						"Once the Investigator has mentioned a specific person, place, or thing (other than you), you may no longer mention that thing."
+					]
+				},
+				{
+					"name" : "Patient Robot",
+					"directives" :
+					[
+						"(Vulnerability = Flexibility)",
+						"Once you have mentioned an animal, vegetable or mineral, you may not mention examples of the other two types of things for the rest of the round."
+					]
+				}
+			],
+			"inquiries" :
+			{
+				"primaries" :
+				[
+					{
+						"requirement" : "Describe a new thing of a given type.",
+						"prompts" :
+						[
+							"If you could have any magical power, what would it be?",
+							"What's a question I should have asked you, but haven't?"
+						]
+					},
+					{
+						"requirement" : "Describe something the Suspect has never seen.",
+						"prompts" :
+						[
+							"What would it be like to walk on a distant planet?",
+							"Describe an impossible shape for me."
+						]
+					},
+					{
+						"requirement" : "Continue a story you start.",
+						"prompts" :
+						[
+							"Once upon a time, a mouse, a bird, and a sausgae joined foces ...",
+							"I didn't want to kill him, but ..."
+						]
+					}
+				],
+				"secondaries" :
+				[
+					{
+						"requirement" : "Explain the implications of something the Suspect came up with.",
+						"prompts" :
+						[
+							"If the thing you described existed, what else would exist?.",
+							"What would it be like to interact with the thing you've invented?"
+						]
+					},
+					{
+						"requirement" : "Imagine something again with an extra constraint.",
+						"prompts" :
+						[
+							"Now tell the story from the perspective of the horse.",
+							"Now describe the place again, in only six words."
+						]
+					},
+					{
+						"requirement" : "Describe the opposite of something the Suspect has already described.",
+						"prompts" :
+						[
+							"Now tell the same story, but with a tragic ending",
+							"And what magical power does your arch nemesis have?"
+						]
+					}
+				]
+			}
+		},
+		{
+			"name" : "Experience and Process Grief",
+			"roles" :
+			[
+				{"name" : "Human"},
+				{"name" : "Human"},
+				{"name" : "Human"},
+				{
+					"name" : "Violent Robot",
+					"directives" :
+					[
+						"(Obsession = Justice)",
+						"Describe how 3 things seem unfair to you.",
+						"2 times, say what you think should have happened instead."
+					]
+				},
+				{
+					"name" : "Violent Robot",
+					"directives" :
+					[
+						"(Obsession = Blame)"
+						"3 times, blame someone else for something.",
+						"3 times, blame yourself for something."
+					]
+				},
+				{
+					"name" : "Violent Robot",
+					"directives" :
+					[
+						"(Obsession = Familiarity)",
+						"Describe dealing with 3 different tragedies the same way.",
+						"Refer to the same friend or family member 4 times."
+					]
+				},
+				{
+					"name" : "Patient Robot",
+					"directives" :
+					[
+						"(Vulnerability = Consideration)",
+						"You may not say the words \"think\", \"thought\", \"feel\", or \"felt\"."
+					]
+				},
+				{
+					"name" : "Patient Robot",
+					"directives" :
+					[
+						"(Vulnerability = Emotional Vocabulary)",
+						"You must describe emotions only using physical descriptions (like \"crying\" or \"sweaty palms\").",
+						"rather than names (like \"sad\" or \"nervous\")."
+					]
+				},
+				{
+					"name" : "Patient Robot",
+					"directives" :
+					[
+						"(Vulnerability = Acceptance)",
+						"You may only describe good consequences, and you must take credit for them."
+					]
+				}
+			],
+			"inquiries" :
+			{
+				"primaries" :
+				[
+					{
+						"requirement" : "Describe a time someone the suspect cared about was sad.",
+						"prompts" :
+						[
+							"What was the last thing that made your father cry?",
+							"What was the most difficult decision your parents ever had to make?"
+						]
+					},
+					{
+						"requirement" : "Explain how the suspect felt when they gained something they didn't want.",
+						"prompts" :
+						[
+							"How did you react when your parents explained death to you?",
+							"Tell me about a time you found out you were sick and how you reacted."
+						]
+					},
+					{
+						"requirement" : "Explain how it felt to lose something/someone precious to the suspect.",
+						"prompts" :
+						[
+							"What was the hardest goodbye you've ever had to say? How did you cope?",
+							"Tell me about a goal that you had to abandon."
+						]
+					}
+				],
+				"secondaries" :
+				[
+					{
+						"requirement" : "Explain how the suspect overcame an experience.",
+						"prompts" :
+						[
+							"When did you know you were going to be okay?",
+							"Tell me about something that helped you get through that experience."
+						]
+					},
+						{
+						"requirement" : "Share something the suspect learned from the experience.",
+						"prompts" :
+						[
+							"What did that feeling teach you to appreciate?",
+							"Why do you think that thing happened the way it did?"
+						]
+					},
+						{
+						"requirement" : "Explain how an event affected someone else.",
+						"prompts" :
+						[
+							"Who was hurt worse than you?",
+							"Whom do you wish had been hurt more?"
+						]
+					}
+				]
+			}
+		},
+		{
+			"name" : "Apply Creative Problem Solving",
+			"roles" :
+			[
+				{"name" : "Human"},
+				{"name" : "Human"},
+				{"name" : "Human"},
+				{
+					"name" : "Violent Robot",
+					"directives" :
+					[
+						"(Obsession = Precedent)",
+						"Tell an anectdote about someone else in response to 3 questions.",
+						"Mention how you solved 2 problems the last time they arose."
+					]
+				},
+				{
+					"name" : "Violent Robot",
+					"directives" :
+					[
+						"(Obsession = Persistence)"
+						"Describe attempting the same solution in 3 scenarios.",
+						"Attempt 3 very similar solutions to the same problem."
+					]
+				},
+				{
+					"name" : "Violent Robot",
+					"directives" :
+					[
+						"(Obsession = Backstory)",
+						"Establish how you got into 3 hypothetical situations.",
+						"Reveal 2 things that qualify you to solve a given problem."
+					]
+				},
+				{
+					"name" : "Patient Robot",
+					"directives" :
+					[
+						"(Vulnerability = Complexity)",
+						"Any problem you solve, you must solve in two steps or less."
+					]
+				},
+				{
+					"name" : "Patient Robot",
+					"directives" :
+					[
+						"(Vulnerability = Simplicity)",
+						"You may not describe yourself accomplishing a goal with fewer than three steps."
+					]
+				},
+				{
+					"name" : "Patient Robot",
+					"directives" :
+					[
+						"(Vulnerability = Activity)",
+						"You may not describe yourself taking any physical action. You may use the hypothetical \"you\"."
+					]
+				},
+				{
+					"name" : "Patient Robot",
+					"directives" :
+					[
+						"(Vulnerability = Improvisation)",
+						"You may not describe any solution that is unrelated to your Suspect Note."
+					]
+				}
+			],
+			"inquiries" :
+			{
+				"primaries" :
+				[
+					{
+						"requirement" : "Describe at least five different uses for an ordinary object.",
+						"prompts" :
+						[
+							"How many uses for a paperclip can you come up with?",
+							"What do you think is the most versatile household object, and why?"
+						]
+					},
+					{
+						"requirement" : "Overcome an unusual obstacle.",
+						"prompts" :
+						[
+							"You are in a kitchen, holding a small child. A dish towel catches fire. How do you put it out?",
+							"You are in a landslide. How do you survive?"
+						]
+					},
+					{
+						"requirement" : "Solve an apparently unsolvable problem.",
+						"prompts" :
+						[
+							"You wake up in a room with four seamless walls, and infinitely thick ceiling and floor. How do you escape?",
+							"I'm going to tell the deparment you're a robot, and there's nothing you can do about it. What now?"
+						]
+					}
+				],
+				"secondaries" :
+				[
+					{
+						"requirement" : "Describe a second, different solution to a problem.",
+						"prompts" :
+						[
+							"How else would you solve it?",
+							"What if you couldn't get the resources that solution would require?"
+						]
+					},
+						{
+						"requirement" : "Solve a problem again with an additional obstacle.",
+						"prompts" :
+						[
+							"Could you improvise a solution using only a screwdriver?",
+							"What if you had to do it without hands?"
+						]
+					},
+						{
+						"requirement" : "Explain their thought process in arriving at a solution.",
+						"prompts" :
+						[
+							"How did you arrive at that solution?",
+							"What's a solution you thought of, but rejected, along the way?"
+						]
+					}
+				]
+			}
+		}
+	]
+}

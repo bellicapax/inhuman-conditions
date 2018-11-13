@@ -1,0 +1,118 @@
+{
+  "name" : "PACKETNAME",
+  "roles" :
+  [
+    {"name" : "Human"},
+    {"name" : "Human"},
+    {"name" : "Human"},
+    {
+      "name" : "Violent Robot",
+      "directives" :
+      [
+        "(Obsession = OBSESSNAME)",
+        "DIRECTIVE.",
+        "DIRECTIVE"
+      ]
+    },
+    {
+      "name" : "Violent Robot",
+      "directives" :
+      [
+        "(Obsession = OBSESSNAME)"
+        "DIRECTIVE.",
+        "DIRECTIVE."
+      ]
+    },
+    {
+      "name" : "Violent Robot",
+      "directives" :
+      [
+        "(Obsession = OBSESSNAME)",
+        "DIRECTIVE.",
+        "DIRECTIVE."
+      ]
+    },
+    {
+      "name" : "Patient Robot",
+      "directives" :
+      [
+        "(Vulnerability = VULNNAME)",
+        "DIRECTIVE."
+      ]
+    },
+    {
+      "name" : "Patient Robot",
+      "directives" :
+      [
+        "(Vulnerability = VULNNAME)",
+        "DIRECTIVE.",
+        "DIRECTIVE."
+      ]
+    },
+    {
+      "name" : "Patient Robot",
+      "directives" :
+      [
+        "(Vulnerability = DIRECTIVE)",
+        "DIRECTIVE."
+      ]
+    }
+  ],
+  "inquiries" :
+  {
+    "primaries" :
+    [
+      {
+        "requirement" : "REQUIRE.",
+        "prompts" :
+        [
+          "PROMPT",
+          "PROMPT"
+        ]
+      },
+      {
+        "requirement" : "REQUIRE.",
+        "prompts" :
+        [
+          "PROMPT",
+          "PROMPT"
+        ]
+      },
+      {
+        "requirement" : "REQUIRE.",
+        "prompts" :
+        [
+          "PROMPT",
+          "PROMPT"
+        ]
+      }
+    ],
+    "secondaries" :
+    [
+      {
+        "requirement" : "REQUIRE.",
+        "prompts" :
+        [
+          "PROMPT.",
+          "PROMPT"
+        ]
+      },
+        {
+        "requirement" : "REQUIRE.",
+        "prompts" :
+        [
+          "PROMPT",
+          "PROMPT"
+        ]
+      },
+        {
+        "requirement" : "REQUIRE.",
+        "prompts" :
+        [
+          "PROMPT",
+          "PROMPT"
+        ]
+      }
+    ]
+  }
+}
