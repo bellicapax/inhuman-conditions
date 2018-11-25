@@ -3,17 +3,33 @@
   <h3>Choose your role</h3>
   <div class="row justify-around">
     <div class="col">
-      <q-btn label="Investigator" color="primary" size="xl" @click="becomeInterrogator" /></div>
+      <job-card :job="Investigator.job" :overview="Investigator.overview"/>
+    </div>
     <div class="col">
-      <q-btn label="Suspect" color="primary" size="xl" @click="becomeSuspect" /></div>
+      <job-card :job="Suspect.job" :overview="Suspect.overview"/>
+    </div>
   </div>
 </div>
 </template>
 
 <script>
+import JobCard from 'components/JobCard'
+
 export default {
+  components: {
+    JobCard
+  },
   data () {
-    return {}
+    return {
+      Investigator: {
+        job: 'Investigator',
+        overview: 'The Investigator always has the same two goals, which go hand in hand: Ensure all human Suspects are properly identified as HUMAN, AND, Ensure all robot Suspects are identified as ROBOT and safely detained. The Investigator loses if the Suspect is incorrectly identified, or if they are killed during the course of their duties by a Violent Robot..'
+      },
+      Suspect: {
+        job: 'Suspect',
+        overview: 'The Suspect\'s goals may change, depending on their role. However, ALL Suspects, robots and humans alike, share one common, overriding objective: Convince the Investigator that you are a human. Any Suspect who is identified as a robot (whether or not that identification is correct) loses. Additionally, robots will have some programming which they must obey.'
+      }
+    }
   },
   methods: {
     becomeInterrogator () {
