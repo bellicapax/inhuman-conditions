@@ -21,7 +21,7 @@
 					"name" : "Violent Robot",
 					"directives" :
 					[
-						"(Obsession = Thoroughness)"
+						"(Obsession = Thoroughness)",
 						"3 times, interrupt the Investigator to add detail to a description.",
 						"Continue to describe something until interrupted."
 					]
@@ -139,7 +139,7 @@
 					"name" : "Violent Robot",
 					"directives" :
 					[
-						"(Obsession = World-Building)"
+						"(Obsession = World-Building)",
 						"Mention the same imagined thing in response to 4 questions.",
 						"Mention 3 imaginary locations."
 					]
@@ -256,7 +256,7 @@
 					"name" : "Violent Robot",
 					"directives" :
 					[
-						"(Obsession = Blame)"
+						"(Obsession = Blame)",
 						"3 times, blame someone else for something.",
 						"3 times, blame yourself for something."
 					]
@@ -374,7 +374,7 @@
 					"name" : "Violent Robot",
 					"directives" :
 					[
-						"(Obsession = Persistence)"
+						"(Obsession = Persistence)",
 						"Describe attempting the same solution in 3 scenarios.",
 						"Attempt 3 very similar solutions to the same problem."
 					]

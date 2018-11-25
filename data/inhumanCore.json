@@ -1,6 +1,5 @@
 {
-  "penalties" :
-  [
+  "penalties": [
     "Apologize",
     "Swear",
     "Snap your fingers",
@@ -19,8 +18,7 @@
     "Say at least three consecutive letters",
     "Begin a new sentence with the last word spoken"
   ],
-  "notes" :
-  [
+  "notes": [
     "Disgraced archaeologist",
     "Maker of false animals",
     "Friends with the Commissioner",
@@ -48,28 +46,22 @@
     "World\"s second richest person",
     "Conspiracy theorist"
   ],
-  "roleTemplates" :
-  {
-    "Human" :
-    {
-      "directives" :
-      [
+  "roleTemplates": {
+    "Human": {
+      "directives": [
         "You have nothing to hide.",
         "Answer questions to the best of your ability."
       ],
-      "objective" : "Be correctly identified as a human."
+      "objective": "Be correctly identified as a human."
     },
-    "Violent Robot" :
-    {
-      "directives" :
-      [
+    "Violent Robot": {
+      "directives": [
         "Perform the Penalty twice"
       ],
-      "objective" : "Murder the Investigator by fulfilling your Obsession. (i.e., completing 2 of your 3 directives) You must do so before you finish the answer to the Investigator\'s final question. Upon completing your objectives, make it known that the Investigator is dead."
+      "objective": "Murder the Investigator by fulfilling your Obsession. (i.e., completing 2 of your 3 directives) You must do so before you finish the answer to the Investigator's final question. Upon completing your objectives, make it known that the Investigator is dead."
     },
-    "Patient Robot" :
-    {
-      "objective" : "Survive the interrogation and receive a Human stamp on your Investigation Form."
+    "Patient Robot": {
+      "objective": "Survive the interrogation and receive a Human stamp on your Investigation Form."
     }
   }
 }
