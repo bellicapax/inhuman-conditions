@@ -25,6 +25,7 @@ export default {
   methods: {
     selectJob () {
       this.$store.commit('setJob', this.job)
+      this.$router.push('new/' + this.job.toLowerCase())
     }
   }
 }

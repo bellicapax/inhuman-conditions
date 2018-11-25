@@ -3,10 +3,10 @@
   <h3>Choose your role</h3>
   <div class="row justify-around">
     <div class="col">
-      <job-card :job="Investigator.job" :overview="Investigator.overview"/>
+      <job-card v-bind="Investigator"/>
     </div>
     <div class="col">
-      <job-card :job="Suspect.job" :overview="Suspect.overview"/>
+      <job-card v-bind="Suspect"/>
     </div>
   </div>
 </div>
