@@ -1,22 +1,33 @@
 <template>
-<q-card class="q-pa-sm q-ma-xl">
-  <q-card-title>
-    <h4>Penalty</h4>
-  </q-card-title>
-  <q-card-separator/>
-  <q-card-main>
-    <h5>{{ penalty }}</h5>
-  </q-card-main>
-  <q-btn size="xl" class="bg-primary text-white full-width" label="Select" @click="selectedCallback" />
-</q-card>
+  <selectable-card>
+    <template slot="title">
+      <h4>Penalty</h4>
+    </template>
+    <template slot="main">
+      <h5>{{ description }}</h5>
+    </template>
+    <template slot="button">
+      <q-btn size="xl" class="bg-primary text-white full-width" label="Select" @click="selectPenalty" />
+    </template>
+  </selectable-card>
 </template>
 
 <script>
+import SelectableCard from 'components/SelectableCard'
+
 export default {
+  components: {
+    SelectableCard
+  },
   props: {
-    penalty: String,
+    description: String,
     isSelected: Boolean,
     selectedCallback: Function
+  },
+  methods: {
+    selectPenalty () {
+      this.selectedCallback(this)
+    }
   }
 }
 </script>
