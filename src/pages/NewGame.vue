@@ -22,12 +22,12 @@ export default {
   data () {
     return {
       Investigator: {
-        job: 'Investigator',
-        overview: 'The Investigator always has the same two goals, which go hand in hand: Ensure all human Suspects are properly identified as HUMAN, AND, Ensure all robot Suspects are identified as ROBOT and safely detained. The Investigator loses if the Suspect is incorrectly identified, or if they are killed during the course of their duties by a Violent Robot..'
+        title: 'Investigator',
+        main: 'The Investigator always has the same two goals, which go hand in hand: Ensure all human Suspects are properly identified as HUMAN, AND, Ensure all robot Suspects are identified as ROBOT and safely detained. The Investigator loses if the Suspect is incorrectly identified, or if they are killed during the course of their duties by a Violent Robot..'
       },
       Suspect: {
-        job: 'Suspect',
-        overview: 'The Suspect\'s goals may change, depending on their role. However, ALL Suspects, robots and humans alike, share one common, overriding objective: Convince the Investigator that you are a human. Any Suspect who is identified as a robot (whether or not that identification is correct) loses. Additionally, robots will have some programming which they must obey.'
+        title: 'Suspect',
+        main: 'The Suspect\'s goals may change, depending on their role. However, ALL Suspects, robots and humans alike, share one common, overriding objective: Convince the Investigator that you are a human. Any Suspect who is identified as a robot (whether or not that identification is correct) loses. Additionally, robots will have some programming which they must obey.'
       }
     }
   },

@@ -1,24 +1,30 @@
 <template>
-<div>
-  <q-card class="q-ma-xl q-pa-sm">
-    <q-card-title>
-      <h4>{{ job }}</h4>
-    </q-card-title>
-    <q-card-separator />
-    <q-card-main>
-      <h5>{{ overview }}</h5>
-    </q-card-main>
-      <q-btn size="xl" class="bg-primary text-white full-width" label="Select" @click="selectJob" />
-  </q-card>
-</div>
+  <div>
+    <selectable-card>
+      <template slot="title">
+        <h4>{{ title }}</h4>
+      </template>
+      <template slot="main">
+        <h5>{{ main }}</h5>
+      </template>
+      <template slot="button">
+        <q-btn size="xl" class="bg-primary text-white full-width" label="Select" @click="selectJob" />
+      </template>
+    </selectable-card>
+  </div>
 </template>
 
 <script>
+import SelectableCard from 'components/SelectableCard'
+import {CardMix} from '../mixins/Mixins'
+
 export default {
-  props: {
-    job: String,
-    overview: String
+  components: {
+    SelectableCard
   },
+  mixins: [
+    CardMix
+  ],
   data () {
     return {}
   },
