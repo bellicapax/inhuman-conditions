@@ -1,6 +1,6 @@
 <template>
   <div class="row">
-    <div v-for="pen in getPenalties()" :key="pen">
+    <div class="col-4" v-for="pen in getPenalties()" :key="pen">
       <penalty :description="pen"/>
     </div>
   </div>

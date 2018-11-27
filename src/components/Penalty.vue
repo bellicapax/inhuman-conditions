@@ -31,3 +31,12 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+h4 {
+  text-align: center
+}
+h5 {
+  text-align: center
+}
+</style>
